@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "tittle": "Say Salut to Essentials theme",
+    "date": "February 15,2020",
+    "bgUrl": "_blogimg1"
+  },
+  {
+    "id": 2,
+    "tittle": "It’s time to say Hello to Essentials theme",
+    "date": "February 15,2020",
+    "bgUrl": "_blogimg2"
+  },
+  {
+    "id": 3,
+    "tittle": "Create any website like a pro",
+    "date": "February 14,2020",
+    "bgUrl": "_blogimg3"
+  },
+  {
+    "id": 4,
+    "tittle": "Add languages to your website",
+    "date": "February 14,2020",
+    "bgUrl": "_blogimg4"
+  },
+  {
+    "id": 5,
+    "tittle": "Hello world, this is Essentials theme",
+    "date": "January 13,2020",
+    "bgUrl": "_blogimg5"
+  }
+]

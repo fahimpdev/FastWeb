@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+:root {
+  --bg1: `url("Assets/Image/software-image-5.png") `;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+._container {
+  max-width: 1140px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hover_parent:hover .child_effect {
+  margin-left: 2px;
+}
+.child_effect {
+  transition: margin 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.skewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  transform: skewY(10deg);
+  transform-origin: top right;
+}
+
+._underline {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 2px;
+  background-image: linear-gradient(red 10%, green 85%, blue 90%);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
 }
 
-.App-link {
-  color: #61dafb;
+._underline:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
 }
+._button_parent:hover .child_button {
+  margin-left: 5px;
+}
+.child_button {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+._icon:hover {
+  margin-bottom: 3px;
+}
+.aboutbg {
+  background-image: url(../src/Assets/Image/about-image6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+._blogimg1 {
+  background-image: url(Assets/Image/software-image-1.png);
+  background-size: cover;
+}
+._blogimg2 {
+  background-image: url(Assets/Image/software-image-2.png);
+  background-size: cover;
+}
+._blogimg3 {
+  background-image: url(Assets/Image/software-image-3.png);
+  background-size: cover;
+}
+._blogimg4 {
+  background-image: url(Assets/Image/software-image-4.png);
+  background-size: cover;
+}
+._blogimg5 {
+  background-image: url(Assets/Image/software-image-5.png);
+  background-size: cover;
+}
+._blogimg6 {
+  background-image: url(Assets/Image/blog-sidebarimage-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._blogimg7 {
+  background-image: url(Assets//Image/software-image-1-622x400.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._blogimg9 {
+  background-image: url(Assets/Image//software-image-2-622x400.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+._blogimg8 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(Assets/Image/software-image-3-622x400.png) #444;
+}
+._postimg1 {
+  background-image: url(Assets/Image/blogimg1.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._postimg2 {
+  background-image: url(Assets/Image/blogimg2.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._postimg3 {
+  background-image: url(Assets/Image/blogimg3.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._postimg4 {
+  background-image: url(Assets/Image/blogimg4.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._input:focus {
+  outline: none;
 }
