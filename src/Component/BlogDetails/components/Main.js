@@ -15,12 +15,7 @@ function Main({ article }) {
   return (
     <div className="max-w-[950px]  m-auto">
       <div className={`h-[450px] w-[100%] ${article.bgUrl}`} />
-      {/* <img
-          src={BlogDetails1}
-          alt="BlogDetails"
-          className="h-[450px] w-[100%] "
-        />
-      </div> */}
+
       <div className="my-[20px] ">
         <div className="flex">
           <div className="px-[15px]">

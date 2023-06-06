@@ -1,5 +1,6 @@
 import React from "react";
-import { IoIosSearch, IoLogoFacebook } from "react-icons/io";
+import SearchBlog from "./Search";
+import { IoLogoFacebook } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import {
   AiOutlineHeart,
@@ -39,21 +40,7 @@ const BlogPost = ({ tittle, bgurl }) => {
 function BlogSearch() {
   return (
     <div className="px-[10px]">
-      <div className="mb-[30px]">
-        <h1 className="text-2xl font-bold mb-[10px] ">Search</h1>
-        <div className=" bg-[#fff] rounded shadow ">
-          <from className="flex items-center justify-between py-[9px] text-[14px] text-[#adb5bd] font-bold px-[18px]">
-            <input
-              className=""
-              type="search"
-              id="gsearch"
-              placeholder="Search for something"
-              name="gsearch"
-            />
-            <IoIosSearch size={20} className="mx-[18px] my-[9px]" />
-          </from>
-        </div>
-      </div>
+      <SearchBlog />
       <div className="mb-[30px]">
         <h1 className="text-[24px] font-bold mb-[10px]">Call to action</h1>
         <div className="_blogimg6 rounded ">

@@ -7,7 +7,7 @@ function Search() {
     <div className="bg-gradient-to-r from-[#9c83e5] to-[#f6588e] h-[100vh] flex justify-center items-center ">
       <div className="w-[750px]">
         <div className="flex justify-between">
-          <h1 className="text-[88px] text-[#fff] font-bold">Search</h1>
+          <h1 className="text-[88px] text-[#fff] font-bold ">Search</h1>
           <TiDeleteOutline
             size={40}
             className="text-[#ffffff80] flex justify-center items-center"
@@ -20,7 +20,7 @@ function Search() {
           <from className="flex items-center  py-[5px] px-[15px]">
             <IoIosSearch size={30} className="mr-[15px]" />
             <input
-              className="w-[100%] _input text-[30px] text-[#adb5bd] p-[5px]"
+              className="w-[100%] _input text-[30px] text-[#adb5bd] w p-[5px]"
               type="search"
               id="gsearch"
               placeholder="Search"
