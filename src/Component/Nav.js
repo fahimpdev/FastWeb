@@ -44,19 +44,19 @@ function Nav() {
           </div>
           <div>
             <ul className="flex  justify-center items-center">
-              <NavLink to="/">
+              <NavLink to="/" className="hover-underline-animation">
                 <Navli tittle="Home" />
               </NavLink>
-              <NavLink to="/price">
+              <NavLink to="/price" className="hover-underline-animation">
                 <Navli tittle="Price" />
               </NavLink>
-              <NavLink to="/about">
+              <NavLink to="/about" className="hover-underline-animation">
                 <Navli tittle="About" />
               </NavLink>
-              <NavLink to="/blog">
+              <NavLink to="/blog" className="hover-underline-animation">
                 <Navli tittle="Blog" />
               </NavLink>
-              <NavLink to="/contact">
+              <NavLink to="/contact" className="hover-underline-animation">
                 <Navli tittle="Contact" />
               </NavLink>
 

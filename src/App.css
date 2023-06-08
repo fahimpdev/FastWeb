@@ -19,33 +19,27 @@
 .child_effect {
   transition: margin 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.skewed {
+
+.hover-underline-animation {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline-animation:after {
+  content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  background-color: #7d8dff;
+  height: 3px;
+  width: 0;
   left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.hover-underline-animation:hover:after {
   width: 100%;
-  height: 100%;
-  background-color: #f8f9fa;
-  transform: skewY(10deg);
-  transform-origin: top right;
 }
 
-._underline {
-  display: flex;
-  padding-bottom: 2px;
-  background-image: linear-gradient(red 10%, green 85%, blue 90%);
-  background-position: 0 100%; /*OR bottom left*/
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
-}
-
-._underline:hover {
-  background-position: 100% 100%; /*OR bottom right*/
-  background-size: 100% 2px;
-}
 ._button_parent:hover .child_button {
   margin-left: 5px;
 }
@@ -67,49 +61,54 @@
   background-image: url(Assets/Image/software-image-1.png);
   background-size: cover;
 }
-._blogimg2 {
+._blogimg3 {
   background-image: url(Assets/Image/software-image-2.png);
   background-size: cover;
 }
-._blogimg3 {
+._blogimg2 {
   background-image: url(Assets/Image/software-image-3.png);
   background-size: cover;
 }
 ._blogimg4 {
-  background-image: url(Assets/Image/software-image-4.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url(Assets/Image/software-image-4.png) #444;
   background-size: cover;
+  background-position: center;
 }
 ._blogimg5 {
-  background-image: url(Assets/Image/software-image-5.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url(Assets/Image/software-image-5.png) #444;
   background-size: cover;
+  background-position: center;
 }
 ._blogimg6 {
-  background-image: url(Assets/Image/blog-sidebarimage-1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url(Assets/Image/blog-sidebarimage-1.jpg) #444;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 ._blogimg7 {
-  background-image: url(Assets//Image/software-image-1-622x400.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
+    url(Assets/Image/software-image-1-622x400.png) #444;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 ._blogimg9 {
-  background-image: url(Assets/Image//software-image-2-622x400.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
+    url(Assets/Image/software-image-2-622x400.png) #444;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 ._blogimg8 {
+  background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
+    url(Assets/Image/software-image-3-622x400.png) #444;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url(Assets/Image/software-image-3-622x400.png) #444;
 }
 ._postimg1 {
   background-image: url(Assets/Image/blogimg1.png);
@@ -141,4 +140,8 @@
 }
 ._input:focus {
   outline: none;
+}
+._card:hover ._child {
+  color: black;
+  transition-duration: 1s;
 }

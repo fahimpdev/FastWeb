@@ -19,9 +19,9 @@ const middleData = [
     icon: (
       <a
         href="!#"
-        className="flex justify-center items-center h-[100px] bg-[#fff] rounded-full w-[100px]"
+        className="flex justify-center items-center h-[100px] hover:scale-110 duration-500  _card bg-[#fff] rounded-full w-[100px]"
       >
-        <BiPlay size={60} className="text-[#adbdb5]" />
+        <BiPlay size={50} className="text-[#adbdb5] _child" />
       </a>
     ),
   },
@@ -30,9 +30,9 @@ const middleData = [
     icon: (
       <a
         href="!#"
-        className="flex justify-center items-center h-[100px] bg-[#fff] rounded-full w-[100px]"
+        className="flex justify-center items-center h-[100px] hover:scale-110 duration-500  _card bg-[#fff] rounded-full w-[100px]"
       >
-        <BsVolumeUp size={60} className="text-[#adbdb5]" />
+        <BsVolumeUp size={50} className="text-[#adbdb5] _child" />
       </a>
     ),
   },
@@ -41,17 +41,17 @@ const middleData = [
     icon: (
       <a
         href="!#"
-        className="flex justify-center items-center h-[100px] bg-[#fff] rounded-full w-[100px]"
+        className="flex justify-center items-center h-[100px] hover:scale-110 duration-500  _card bg-[#fff] rounded-full w-[100px]"
       >
-        <AiOutlinePaperClip size={60} className="text-[#adbdb5]" />
+        <AiOutlinePaperClip size={50} className="text-[#adbdb5] _child" />
       </a>
     ),
   },
   {
     id: 4,
     icon: (
-      <div className="flex justify-center items-center flex-col">
-        <p className="text-[20px]  text-[#fff]">
+      <div className="flex justify-center items-center py-[30px] px-[20px] italic flex-col">
+        <p className="text-[20px] text-center text-[#fff]">
           Everything should be made as simple as possible,but not simpler.
         </p>
         <h1 className="text-[20px] font-bold mt-[10px] text-[#fff]">
@@ -63,8 +63,8 @@ const middleData = [
   {
     id: 5,
     icon: (
-      <div className="flex justify-center items-center flex-col">
-        <p className="text-[20px]  text-[#fff]">
+      <div className="flex justify-center items-center py-[30px] px-[20px] italic flex-col">
+        <p className="text-[20px] text-center text-[#fff]">
           Everything should be made as simple as possible,but not simpler.
         </p>
         <h1 className="text-[20px] font-bold mt-[10px] text-[#fff]">
@@ -75,7 +75,7 @@ const middleData = [
   },
 ];
 
-const Card = ({ tittle, time, bgUrl, bgMiddleChild, id }) => {
+const Card = ({ tittle, date, bgUrl, bgMiddleChild, id }) => {
   return (
     <div className=" grid grid-cols-2 mb-[60px]   shadow-lg">
       <div
@@ -129,7 +129,7 @@ const Card = ({ tittle, time, bgUrl, bgMiddleChild, id }) => {
         <div className="flex justify-between pt-4 mt-6 text-[12px] text-[#adb5bd]">
           <a href="!#" className="flex items-center ">
             <CiClock2 size={20} className="mr-[5px]" />
-            <span>{time}</span>
+            <span>{date}</span>
           </a>
           <Link
             to={"/blog-details/" + id}
@@ -152,12 +152,10 @@ function BlogCard() {
           {BlogData.map((data, index) => {
             return (
               <Card
-                id={data.id}
                 key={data.id}
-                tittle={data.tittle}
-                bgUrl={data.bgUrl}
+                //Data.tittle,id.date
+                {...data}
                 bgMiddleChild={middleData[index].icon}
-                time={data.date}
               />
             );
           })}

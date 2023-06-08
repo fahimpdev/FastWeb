@@ -11,16 +11,15 @@ import HomeImage5 from "../../../Assets/Image/fast-stack-2-tiny_1.webp";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 function Main() {
-  // const { text } = useTypewriter({
-  //   words: ["Startup", "Designer", "Agency"],
-  //   loop: {},
-  //   typeSpeed: 120,
-  //   deleteSpeed: 80,
-  // });
+  const { text } = useTypewriter({
+    words: ["Startup", "Designer", "Agency"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 80,
+  });
 
   return (
     <div className="h-[100vh] flex items-center relative">
-      {/* <div className="skewed" /> */}
       <Container>
         <div className="grid grid-cols-2 gap-[10px]">
           <div className="">
@@ -61,13 +60,13 @@ function Main() {
               </Fade>
             </div>
             <h1 className="text-[60px] my-4 font-bold leading-snug">
-              Perfect website <br /> for every Designer
-              {/* <span className="text-[60px] mb-5 font-bold leading-[1.8]">
+              Perfect website <br /> for every
+              <span className="text-[60px] mb-5 font-bold leading-[1.8]">
                 {text}
               </span>
               <span>
                 <Cursor />
-              </span> */}
+              </span>
             </h1>
             <p className="my-[30px] text-xl text-[#adb5bd] font-bold">
               We provides you with user management functionality <br />
