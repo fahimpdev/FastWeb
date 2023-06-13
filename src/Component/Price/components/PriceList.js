@@ -43,37 +43,43 @@ const PriceCardLi = ({ icon, tittle }) => {
   );
 };
 
+const PriceCard = ({}) => {
+  return (
+    <div className="bg-[#fff] hover:shadow shadow-lg rounded h-fit p-[35px]">
+      <PriceCardHeading
+        heading="Lowest Price"
+        price="$19"
+        para="For beginners"
+        headingStyle="text-[#7d8dff]"
+        headingbg="bg-[#e3e6ff26]"
+      />
+      <div className="pt-6 py-2">
+        <PriceCardLi tittle="Premium support" icon={<FiPhoneCall />} />
+        <PriceCardLi tittle="Cancel anytime" icon={<AiFillPieChart />} />
+        <PriceCardLi tittle="Premium support" icon={<GiCircleClaws />} />
+        <PriceCardLi tittle="Premium support" icon={<MdLockReset />} />
+      </div>
+      <div className="flex justify-center items-center  _button_parent  ">
+        <a
+          className="flex justify-center items-center py-[10px] w-[100%] px-6 rounded text-[#fff] text-base font-bold bg-[#7d8dff]"
+          href="!#"
+        >
+          <HiOutlineShoppingBag size={20} className="mr-1 child_button" />
+          <span className="child_button">Purchase Essentials</span>
+        </a>
+      </div>
+    </div>
+  );
+};
+
 function PriceList() {
   return (
     <div>
       {" "}
       <div className="pt-[20px] pb-[80px]">
         <div className="grid grid-cols-3 gap-3">
-          <div className="bg-[#fff] shadow-lg rounded h-fit p-[35px]">
-            <PriceCardHeading
-              heading="Lowest Price"
-              price="$19"
-              para="For beginners"
-              headingStyle="text-[#7d8dff]"
-              headingbg="bg-[#e3e6ff26]"
-            />
-            <div className="pt-6 py-2">
-              <PriceCardLi tittle="Premium support" icon={<FiPhoneCall />} />
-              <PriceCardLi tittle="Cancel anytime" icon={<AiFillPieChart />} />
-              <PriceCardLi tittle="Premium support" icon={<GiCircleClaws />} />
-              <PriceCardLi tittle="Premium support" icon={<MdLockReset />} />
-            </div>
-            <div className="flex justify-center items-center  _button_parent  ">
-              <a
-                className="flex justify-center items-center py-[10px] w-[100%] px-6 rounded text-[#fff] text-base font-bold bg-[#7d8dff]"
-                href="!#"
-              >
-                <HiOutlineShoppingBag size={20} className="mr-1 child_button" />
-                <span className="child_button">Purchase Essentials</span>
-              </a>
-            </div>
-          </div>
-          <div className="bg-[#fff] shadow-lg  rounded h-fit p-[35px]">
+          <PriceCard />
+          <div className="bg-[#fff] hover:shadow shadow-lg  rounded h-fit p-[35px]">
             <PriceCardHeading
               heading="Recommended"
               price="$49"
@@ -100,7 +106,7 @@ function PriceList() {
               </a>
             </div>
           </div>
-          <div className="bg-[#fff] shadow-lg rounded h-fit p-[35px]">
+          <div className="bg-[#fff] hover:shadow shadow-lg rounded h-fit p-[35px]">
             <PriceCardHeading
               heading="Most Popular"
               price="$99"

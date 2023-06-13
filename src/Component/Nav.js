@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import Logo from "../Assets/Image/fast-logo-dark.png";
 import { TfiSearch } from "react-icons/tfi";
@@ -21,10 +21,22 @@ const Navli = ({ tittle }) => {
 };
 
 function Nav() {
+  const [fix, setFix] = useState(false);
+
+  function setFixed() {
+    if (window.scrollY > 0) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  }
+
+  window.addEventListener("scroll", setFixed);
+
   return (
-    <section className="py-2 px-[15px]  shadow w-full z-50">
+    <section className={fix ? "_navbar _fixed shadow" : "_navbar"}>
       <Container>
-        <div className="flex justify-between  items-center    ">
+        <div className="flex justify-between">
           <div className="flex justify-center items-center ">
             <a href="!#">
               <img className="h-[52px] w-auto py-[5px]" src={Logo} alt="logo" />

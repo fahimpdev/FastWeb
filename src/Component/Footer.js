@@ -5,7 +5,13 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
 
-const FooterCard = ({ tittle, service1, service2, service3 }) => {
+const FooterCard = ({
+  tittle,
+  service1,
+  service2,
+  service3,
+  lastChildstyle,
+}) => {
   return (
     <div className="basis-1/5  p-[10px] ">
       <h1 className="text-center text-[24px] font-bold pb-5">{tittle}</h1>
@@ -24,7 +30,7 @@ const FooterCard = ({ tittle, service1, service2, service3 }) => {
         </a>
         <a
           href="!#"
-          className="text-base hover-underline-animation font-bold text-[#adb5bd] mb-5 "
+          className={`text-base hover-underline-animation font-bold  mb-5 ${lastChildstyle}`}
         >
           {service3}
         </a>
@@ -74,25 +80,28 @@ function Footer() {
                 service1="Help Center"
                 service2="Pricing"
                 service3="Contact us"
+                lastChildstyle="text-[#adb5bd]"
               />
               <FooterCard
                 tittle="product"
                 service1="Blog"
                 service2="Elements"
                 service3="Products"
+                lastChildstyle="text-[#adb5bd]"
               />
               <FooterCard
                 tittle="Company"
                 service1=" About"
                 service2="Careers"
                 service3="We're hiring!"
+                lastChildstyle="text-[#7d8dff]"
               />
             </div>
           </Container>
         </div>
         <Container>
           <div className="py-[30px]">
-            <div className="flex justify-center  pt-[30px] p-[10px] ">
+            <div className="flex justify-center   pt-[30px] p-[10px] ">
               <a
                 href="!#"
                 className="mx-[24px] my-[10px]  text-[#adb5bd] hover-underline-animation text-base font-bold"

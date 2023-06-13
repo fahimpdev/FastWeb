@@ -16,7 +16,7 @@ const WebCard = ({
   cardStyle,
 }) => {
   return (
-    <div className={` p-10  ${cardStyle}`}>
+    <div className={` p-10 mb-[20px]  ${cardStyle}`}>
       <div className="flex">
         <div className="h-[100px] w-[100px]">
           <img src={image} alt="webimg1" />
@@ -58,12 +58,11 @@ function Website() {
                 want, switch components on the go!
               </p>
               <Fade bottom delay={100}>
-                {" "}
                 <WebCard
                   image={webImage1}
                   buttonIcon={<CgProfile className="mr-1 text-[20px]" />}
                   buttonText="Accquire new customers"
-                  cardStyle="bg-white shadow"
+                  cardStyle="bg-white shadow hover:-translate-y-1 duration-300"
                   buttontextColor="text-[#fff]"
                 />
               </Fade>

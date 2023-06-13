@@ -9,6 +9,27 @@ import HomeImage3 from "../../../Assets/Image/icon-circle-3.png";
 import HomeImage4 from "../../../Assets/Image/fast-stack-1-tiny_1.webp";
 import HomeImage5 from "../../../Assets/Image/fast-stack-2-tiny_1.webp";
 import Typewriter from "typewriter-effect";
+import { Tooltip } from "flowbite-react";
+
+const Mainimage = ({
+  image,
+  imageStyle,
+  content,
+  delay,
+  fadeBottom = true,
+}) => {
+  return (
+    <Fade bottom={fadeBottom} delay={delay}>
+      <div className={`relative  ${imageStyle}`}>
+        <img
+          className={`h-[60px] border-[3px] w-[60px] rounded-full`}
+          src={image}
+          alt="HomeImage1"
+        />
+      </div>
+    </Fade>
+  );
+};
 
 function Main() {
   return (
@@ -19,34 +40,48 @@ function Main() {
             <div className="">
               <div className="flex pb-5 overflow-hidden">
                 <div className="flex hover_parent">
-                  <Fade>
-                    <img
-                      className="h-[60px] border-[3px] w-[60px] rounded-full"
-                      src={HomeImage1}
-                      alt="HomeImage1"
+                  <Tooltip
+                    content="Sequre Platform"
+                    arrow={false}
+                    placement="bottom"
+                  >
+                    <Mainimage
+                      image={HomeImage1}
+                      delay={0}
+                      fadeBottom={false}
                     />
-                  </Fade>
-                  <Fade bottom delay={20}>
-                    <img
-                      className="h-[60px] child_effect  ml-[-25px] border-[3px] w-[60px] rounded-full"
-                      src={HomeImage2}
-                      alt="HomeImage2"
+                  </Tooltip>
+                  <Tooltip
+                    content="World wide"
+                    arrow={false}
+                    placement="bottom"
+                  >
+                    <Mainimage
+                      image={HomeImage2}
+                      imageStyle="child_effect  "
+                      delay={20}
                     />
-                  </Fade>
-                  <Fade bottom delay={30}>
-                    <img
-                      className="h-[60px] child_effect ml-[-25px] w-[60px] border-[3px] rounded-full"
-                      src={HomeImage3}
-                      alt="HomeImage3"
+                  </Tooltip>
+                  <Tooltip
+                    content="Online shop"
+                    arrow={false}
+                    placement="bottom"
+                  >
+                    <Mainimage
+                      image={HomeImage3}
+                      imageStyle="child_effect  "
+                      delay={50}
                     />
-                  </Fade>
+                  </Tooltip>
                 </div>
                 <Fade bottom delay={40}>
                   <a
-                    className="px-8  py-3 text-base font-bold flex justify-center items-center "
+                    className="px-8 py-3 text-base font-bold flex justify-center items-center "
                     href="!#"
                   >
-                    Check all categories
+                    <h1 className=" mainsec-hover-underline">
+                      Check all categories
+                    </h1>
                     <span className="">
                       <MdKeyboardArrowRight size={16} />
                     </span>
@@ -71,12 +106,9 @@ function Main() {
                 We provides you with user management functionality <br />
                 that results in faster development and revenue
               </p>
-              <div
-                className=" 
-            flex  _button_parent "
-              >
+              <div className="flex _button_parent relative w-fit">
                 <a
-                  className=" flex justify-center items-center shadow-md rounded   bg-[#7d8dff] text-[18px] text-[#ffffff] font-bold px-8 py-3 "
+                  className=" flex justify-center items-center border-b-2 border-indigo-500 rounded shadow-2xl  bg-[#7d8dff] text-[18px] text-[#ffffff] font-bold px-8 py-3 "
                   href="!#"
                 >
                   <CgProfile className="mr-1" />
@@ -86,12 +118,12 @@ function Main() {
             </div>
             <div className="flex relative">
               <img
-                className="rounded absolute top-0 left-0"
+                className="rounded shadow-lg hover:shadow-2xl duration-500 absolute top-0 left-0"
                 src={HomeImage4}
                 alt="Homeimage4"
               />
               <img
-                className="rounded absolute -z-10 bottom-0 right-0 "
+                className="rounded absolute  -z-10 bottom-0 right-0 "
                 src={HomeImage5}
                 alt="Homeimage5"
               />

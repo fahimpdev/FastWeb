@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Fade } from "react-reveal";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { CiClock2 } from "react-icons/ci";
 import { FaRegComment } from "react-icons/fa";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BiPlay } from "react-icons/bi";
 import { AiOutlinePaperClip } from "react-icons/ai";
 import { BsVolumeUp } from "react-icons/bs";
@@ -75,11 +75,19 @@ const middleData = [
   },
 ];
 
-const Card = ({ tittle, date, bgUrl, bgMiddleChild, id }) => {
+const Card = ({ tittle, date, bgUrl, bgMiddleChild, id, like }) => {
+  const [isReact, setIsReact] = useState(false);
+  const [count, setCount] = useState(like);
+
+  const toggleIsReact = () => {
+    setIsReact((current) => !current);
+    !isReact ? setCount(count + 1) : setCount(count - 1);
+  };
+
   return (
     <div className=" grid grid-cols-2 mb-[60px]   shadow-lg">
       <div
-        className={`relative flex items-center ${bgUrl} justify-center bg-cover bg-center p-[20px] 55bg-no-repeat`}
+        className={`relative flex items-center ${bgUrl} justify-center bg-cover bg-center p-[20px] bg-no-repeat`}
       >
         <div href="!#">{bgMiddleChild}</div>
 
@@ -96,11 +104,16 @@ const Card = ({ tittle, date, bgUrl, bgMiddleChild, id }) => {
 
             <div className="bg-white ml-5  rounded">
               <button
+                onClick={toggleIsReact}
                 href="!#"
-                className="flex justify-center items-center px-[10px] py-[5px] text-[#adb5bd]"
+                className="flex justify-center items-center w-[60px] px-[10px] py-[5px] text-[#adb5bd]"
               >
-                <AiOutlineHeart size={20} />
-                <span>11</span>
+                {isReact ? (
+                  <AiFillHeart size={20} />
+                ) : (
+                  <AiOutlineHeart size={20} />
+                )}
+                <span className="ml-[2px]">{count}</span>
               </button>
             </div>
           </div>

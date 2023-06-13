@@ -9,7 +9,7 @@ import Message from "./Message";
 
 const ContactCard = ({ aboutIcon, tittle, address }) => {
   return (
-    <div className="flex rounded-xl shadow-2xl p-5">
+    <div className="flex rounded-xl bg-[#fff] shadow-xl hover:-translate-y-2 duration-500 p-5">
       <div className=" flex items-center mr-5  bg-[#e3e6ff26] rounded-full">
         {aboutIcon}
       </div>
@@ -55,7 +55,7 @@ function Main() {
             />
             <ContactCard
               aboutIcon={
-                <BiWorld className=" h-[36px] w-[36px] text-[#7d8dff] " />
+                <BiWorld className=" h-[36px] w-[36px] text-[#7d8dff] opacity-[0.5] " />
               }
               tittle="Visit our HQ"
               address="La Défense, Paris"

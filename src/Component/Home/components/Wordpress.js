@@ -24,7 +24,7 @@ const WordPrressComponent = ({ image, tittle, desc }) => {
 
 function Wordpress() {
   return (
-    <section className=" pt-[40px] pb-[140px] bg-[#f8f9fa]">
+    <section className=" pt-[40px] pb-[140px]  ">
       <Container>
         <Fade>
           <div className="text-center p-[10px]">

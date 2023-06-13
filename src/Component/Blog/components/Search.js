@@ -14,7 +14,7 @@ function SearchBlog() {
           <from className="flex items-center justify-between py-[9px] shadow-2xl text-[14px] text-[#adb5bd] font-bold px-[18px]">
             <input
               onChange={(e) => setSearch(e.target.value)}
-              className="w-[100%] _input"
+              className="w-[100%] _input border-none"
               type="search"
               id="gsearch"
               placeholder="Search for something"

@@ -10,7 +10,7 @@ function Essential() {
         <div className="flex justify-between items-center">
           <a
             href="!#"
-            className="flex justify-center items-center shadow shadow-slate-700 hover:scale-110 duration-300 h-[100px] bg-[#fff] rounded-full w-[100px]"
+            className="flex justify-center items-center shadow-2xl hover:scale-110 duration-300 h-[100px] bg-[#fff] rounded-full w-[100px]"
           >
             <BiPlay size={60} />
           </a>
@@ -24,9 +24,9 @@ function Essential() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center _button_parent  ">
+          <div className="flex justify-center items-center">
             <a
-              className="flex justify-center items-center px-8 py-3 rounded text-[#ffffff] text-[18px] font-bold bg-[#ff4f81] shadow"
+              className="flex justify-center items-center _button_parent border-b-2 border-red-600 px-8 py-3 rounded text-[#ffffff] text-[18px] font-bold bg-[#ff4f81] shadow-2xl"
               href="!#"
             >
               <SlHandbag className="mr-1 " />

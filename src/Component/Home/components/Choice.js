@@ -22,33 +22,34 @@ function Choice() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-1">
-            <div className="p-[10px] ">
-              <div className="bg-[#fff] shadow-md rounded-md  h-[500px] ">
-                <div className="p-[10px]  flex justify-center items-center  flex-col rounded-2xl ">
-                  <BiWorld size={80} className="text-[#7d8dff] mt-10 " />
-                  <h1 className="text-[36px] text-center font-bold pt-[30px] ">
-                    join the revolution of WordPress themes.
-                  </h1>
-                  <h1 className=" flex justify-center items-center text-center text-[18px] font-bold text-[#adb5bd] pt-[15px]">
-                    Ger Essentials today and start building next- <br />
-                    generation websites
-                  </h1>
-                  <a
-                    href="!#"
-                    className="flex justify-center _button_parent items-center text-center py-3 px-8 rounded bg-[#7d8dff] mt-10"
-                  >
-                    <BiMenu className="text-[18px] child_button text-[#fff] font-bold mr-2" />
-                    <span className="text-[18px] child_button text-[#fff] font-bold">
-                      Check all services
-                    </span>
-                  </a>
-                </div>
+            <div className="bg-[#fff] m-[10px] shadow-md rounded-md sticky top-16  h-[500px] hover:-translate-y-2 duration-300 ">
+              <div className="p-[10px]  flex justify-center items-center  flex-col rounded-2xl ">
+                <BiWorld
+                  size={80}
+                  className="text-[#7d8dff] opacity-60 mt-10 "
+                />
+                <h1 className="text-[36px] text-center font-bold pt-[30px] ">
+                  join the revolution of WordPress themes.
+                </h1>
+                <h1 className=" flex justify-center items-center text-center text-[18px] font-bold text-[#adb5bd] pt-[15px]">
+                  Ger Essentials today and start building next- <br />
+                  generation websites
+                </h1>
+                <a
+                  href="!#"
+                  className="flex justify-center _button_parent items-center text-center py-3 px-8 rounded bg-[#7d8dff] mt-10"
+                >
+                  <BiMenu className="text-[18px] child_button text-[#fff] font-bold mr-2" />
+                  <span className="text-[18px] child_button text-[#fff] font-bold">
+                    Check all services
+                  </span>
+                </a>
               </div>
             </div>
 
             <div className=" p-[10px]  ">
-              <div className="bg-[#ffffff] shadow-2xl rounded  ">
-                <img src={choiceImage} alt="ChoiceImage" />
+              <div className="bg-[#ffffff] shadow-lg hover:-translate-y-2 duration-300 hover:shadow-2xl  rounded  ">
+                <img src={choiceImage} alt="ChoiceImage" className="w-full" />
                 <a
                   href="!#"
                   className="flex justify-between items-center p-5 text-[18px] font-bold"
