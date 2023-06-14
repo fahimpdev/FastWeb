@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "react-vanilla-tilt";
 import Container from "../../Container";
 import CounterImage1 from "../../../Assets/Image/unnamed (1).png";
 import CounterImage2 from "../../../Assets/Image/Countimg-2.png";
@@ -29,6 +30,11 @@ const data = myArray.map((item, index) => {
     </Fade>
   );
 });
+
+const myStyle = {
+  width: "100%",
+  boxShadow: "0 0 0 0.0",
+};
 
 function Count() {
   return (
@@ -64,15 +70,17 @@ function Count() {
             </div>
           </div>
         </div>
-        <div className="pt-20   ">
-          <div className="aboutbg flex justify-center items-center rounded">
-            <a
-              href="!#"
-              className="flex justify-center items-center h-[100px] bg-[#fff] rounded-full w-[100px]"
-            >
-              <FaPlay size={30} />
-            </a>
-          </div>
+        <div className="pt-20">
+          <Title style={myStyle}>
+            <div className="aboutbg flex justify-center items-center rounded">
+              <a
+                href="!#"
+                className="flex justify-center items-center hover:scale-110 duration-500 h-[100px] bg-[#fff] rounded-full w-[100px]"
+              >
+                <FaPlay size={30} />
+              </a>
+            </div>
+          </Title>
         </div>
         <div className="flex justify-center  pt-[30px]  ">
           <span className="bg-[#e9ecef]  rounded text-[13px] font-bold py-[5px] px-[10px]">
